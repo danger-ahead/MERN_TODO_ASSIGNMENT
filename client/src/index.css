@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #00d9ff;
+  --success-color: #00aa69;
+  --danger-color: #ca0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  background: #222;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+  scale: 1.05;
+}
+
+.App {
+  max-width: 728px;
+  margin: 4rem auto;
+}
+
+.App > h1 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.Card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #333333;
+}
+
+.Card--text h1 {
+  color: var(--primary-color);
+}
+
+.Card--button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.Card--button button {
+  border: none;
+  outline: none;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.Card--button__delete {
+  background-color: var(--danger-color);
+}
+
+.Card--button__done {
+  background-color: var(--success-color);
+}
+
+.Form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #444;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+}
+
+.Form--input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.Form input {
+  background: #f5f6f7;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  display: block;
+  margin: 0.3rem 1rem 0 0;
+}
+
+.Form button {
+  background: var(--success-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #777 !important;
+}
+
+.hide-button {
+  display: none;
+}
+
+.style__date-time {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.style__edit-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+}
+
+.style__edit-btn img {
+  height: 25px;
+  width: 25px;
+}
+
+.style__edit-modal {
+  background-color: transparent;
+  position: relative;
+  top: 40vh;
+  width: 90vw;
+  left: 5vw;
+  border-radius: 20px;
+  background-color: #444;
+}
+
+.style__edit-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #333333;
+}
+
+.style__edit-modal__close-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 25px;
+  width: 25px;
+}
+
+.style__edit-modal__close-btn {
+  height: inherit;
+  width: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .Form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
